@@ -4,31 +4,31 @@
  */
 package ec.edu.ups.interfazbiblioteca.clases;
 
-import ec.edu.ups.interfazbiblioteca.InterfazBiblioteca;
-import java.awt.BorderLayout;
-import java.awt.Button;
 import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.Frame;
-import java.awt.Label;
-import java.awt.Panel;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class Saludar3 implements MouseListener {
-@Override
+/**
+ *
+ * @author ASUS
+ */
+public class Ejemplo0  implements MouseListener {
+    
+    @Override
 public void mouseClicked(MouseEvent evento) {
-
-    Label titulo = new Label("Como");
+    java.awt.Frame f = new java.awt.Frame("FlowLayout");
+    f.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+    f.add(new java.awt.Button("Primer botón"));
+    f.add(new java.awt.Button("Segundo botón"));
+    f.setSize(200, 100);
+    f.setVisible(true);
 
 }
 @Override
 public void mousePressed(MouseEvent evento) {
-    
 }
 @Override
 public void mouseReleased(MouseEvent evento) {
-    
 }
 @Override
 public void mouseEntered(MouseEvent evento) {
@@ -37,6 +37,7 @@ evento.getComponent().setBackground(Color.red);
 @Override
 public void mouseExited(MouseEvent evento) {
 evento.getComponent().
-setBackground(new Color(75,0,130));
-}}
+setBackground(Color.YELLOW);
 
+    
+}}

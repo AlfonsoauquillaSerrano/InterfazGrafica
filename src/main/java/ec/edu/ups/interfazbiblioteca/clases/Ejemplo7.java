@@ -4,38 +4,30 @@
  */
 package ec.edu.ups.interfazbiblioteca.clases;
 
-import ec.edu.ups.interfazbiblioteca.InterfazBiblioteca;
-import java.awt.Button;
 import java.awt.Color;
-import java.awt.Frame;
-import java.awt.Panel;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class EsquemaRaton7 implements MouseListener {
-@Override
+/**
+ *
+ * @author ASUS
+ */
+public class Ejemplo7 implements MouseListener {
+    
+    @Override
 public void mouseClicked(MouseEvent evento) {
-
-Frame miVentana = new Frame("holi");
-Panel miPanel = new Panel();
-Button botonL = new Button("Libro");
-Button botonU = new Button("Usuario");
-miPanel.add(botonL);
-miPanel.add(botonU);
-miVentana.add(miPanel);
-miVentana.setSize(200, 300);
-miVentana.setLocation(500, 500);
-miVentana.setVisible(true);
-botonL.addMouseListener(new EsquemaRatonR());
-botonU.addMouseListener(new EsquemaRatonR());;
+java.awt.Frame f = new java.awt.Frame("Checkbox");
+        f.setLayout(new java.awt.FlowLayout());
+        java.awt.Checkbox chk = new java.awt.Checkbox("Pintura Metalizada", true);
+        f.add(chk);
+        f.setSize(200, 100);
+        f.setVisible(true);
 }
 @Override
 public void mousePressed(MouseEvent evento) {
-    System.out.println("hola");
 }
 @Override
 public void mouseReleased(MouseEvent evento) {
-    System.out.println("pepe");
 }
 @Override
 public void mouseEntered(MouseEvent evento) {
@@ -44,7 +36,7 @@ evento.getComponent().setBackground(Color.red);
 @Override
 public void mouseExited(MouseEvent evento) {
 evento.getComponent().
-setBackground(new Color(75,0,130));
+setBackground(Color.BLUE);
 
+    
 }}
-

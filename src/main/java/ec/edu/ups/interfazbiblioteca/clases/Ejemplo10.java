@@ -4,42 +4,36 @@
  */
 package ec.edu.ups.interfazbiblioteca.clases;
 
-import ec.edu.ups.interfazbiblioteca.InterfazBiblioteca;
-import java.awt.BorderLayout;
-import java.awt.Button;
 import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.Frame;
-import java.awt.Label;
-import java.awt.Panel;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class EsquemaRatonSaludar implements MouseListener {
-
-Label titulo;
-
-    public EsquemaRatonSaludar(Label titulo) {
-        this.titulo = titulo;
-    }
-
-@Override
+/**
+ *
+ * @author ASUS
+ */
+public class Ejemplo10  implements MouseListener {
+    
+    @Override
 public void mouseClicked(MouseEvent evento) {
-
-   Label componente = (Label) evento.getSource();
-String nombre = componente.getName();
-String opcion = nombre.substring(nombre.length() - 2, nombre.length());
-titulo.setText("Hola");
-
-
+java.awt.Frame f = new java.awt.Frame("ItemListener");
+        f.setLayout(new java.awt.FlowLayout());
+        java.awt.Checkbox chk = new java.awt.Checkbox("Seleccióname");
+        chk.addItemListener(new java.awt.event.ItemListener() {
+            @Override
+            public void itemStateChanged(java.awt.event.ItemEvent e) {
+                System.out.println("Estado de la casilla: " + e.getStateChange());
+            }
+        });
+        f.add(chk);
+        f.setSize(200, 100);
+        f.setVisible(true);
 }
 @Override
 public void mousePressed(MouseEvent evento) {
-    
 }
 @Override
 public void mouseReleased(MouseEvent evento) {
-    
 }
 @Override
 public void mouseEntered(MouseEvent evento) {
@@ -48,6 +42,7 @@ evento.getComponent().setBackground(Color.red);
 @Override
 public void mouseExited(MouseEvent evento) {
 evento.getComponent().
-setBackground(new Color(75,0,130));
-}}
+setBackground(Color.RED);
 
+    
+}}
