@@ -12,16 +12,17 @@ import java.awt.event.MouseListener;
  *
  * @author ASUS
  */
-public class Ejemplo12  implements MouseListener {
-    
+public class Ejemplo12 implements MouseListener {
+
     @Override
-public void mouseClicked(MouseEvent evento) {
-java.awt.Frame f = new java.awt.Frame("WindowListener");
+    public void mouseClicked(MouseEvent evento) {
+        java.awt.Frame f = new java.awt.Frame("WindowListener");
         f.addWindowListener(new java.awt.event.WindowAdapter() {
             @Override
             public void windowOpened(java.awt.event.WindowEvent e) {
                 System.out.println("La ventana se ha abierto.");
             }
+
             @Override
             public void windowClosing(java.awt.event.WindowEvent e) {
                 e.getWindow().dispose();
@@ -29,21 +30,25 @@ java.awt.Frame f = new java.awt.Frame("WindowListener");
         });
         f.setSize(200, 100);
         f.setVisible(true);
-}
-@Override
-public void mousePressed(MouseEvent evento) {
-}
-@Override
-public void mouseReleased(MouseEvent evento) {
-}
-@Override
-public void mouseEntered(MouseEvent evento) {
-evento.getComponent().setBackground(Color.red);
-}
-@Override
-public void mouseExited(MouseEvent evento) {
-evento.getComponent().
-setBackground(Color.RED);
+    }
 
-    
-}}
+    @Override
+    public void mousePressed(MouseEvent evento) {
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent evento) {
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent evento) {
+        evento.getComponent().setBackground(Color.red);
+    }
+
+    @Override
+    public void mouseExited(MouseEvent evento) {
+        evento.getComponent().
+                setBackground(Color.RED);
+
+    }
+}

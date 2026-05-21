@@ -13,30 +13,34 @@ import java.awt.event.MouseListener;
  * @author ASUS
  */
 public class Ejemplo7 implements MouseListener {
-    
+
     @Override
-public void mouseClicked(MouseEvent evento) {
-java.awt.Frame f = new java.awt.Frame("Checkbox");
+    public void mouseClicked(MouseEvent evento) {
+        java.awt.Frame f = new java.awt.Frame("Checkbox");
         f.setLayout(new java.awt.FlowLayout());
-        java.awt.Checkbox chk = new java.awt.Checkbox("Pintura Metalizada", true);
+        java.awt.Checkbox chk = new java.awt.Checkbox("Pintura", true);
         f.add(chk);
         f.setSize(200, 100);
         f.setVisible(true);
-}
-@Override
-public void mousePressed(MouseEvent evento) {
-}
-@Override
-public void mouseReleased(MouseEvent evento) {
-}
-@Override
-public void mouseEntered(MouseEvent evento) {
-evento.getComponent().setBackground(Color.red);
-}
-@Override
-public void mouseExited(MouseEvent evento) {
-evento.getComponent().
-setBackground(Color.BLUE);
+    }
 
-    
-}}
+    @Override
+    public void mousePressed(MouseEvent evento) {
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent evento) {
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent evento) {
+        evento.getComponent().setBackground(Color.red);
+    }
+
+    @Override
+    public void mouseExited(MouseEvent evento) {
+        evento.getComponent().
+                setBackground(Color.BLUE);
+
+    }
+}

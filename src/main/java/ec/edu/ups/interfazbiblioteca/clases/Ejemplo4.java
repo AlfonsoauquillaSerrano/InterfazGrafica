@@ -12,26 +12,30 @@ import java.awt.event.MouseListener;
  *
  * @author ASUS
  */
-public class Ejemplo4  implements MouseListener {
-    
-    @Override
-public void mouseClicked(MouseEvent evento) {
-    System.out.println("Clic en posicion relativa al boton -> X: " + evento.getX() + ", Y: " + evento.getY());
-}
-@Override
-public void mousePressed(MouseEvent evento) {
-}
-@Override
-public void mouseReleased(MouseEvent evento) {
-}
-@Override
-public void mouseEntered(MouseEvent evento) {
-evento.getComponent().setBackground(Color.red);
-}
-@Override
-public void mouseExited(MouseEvent evento) {
-evento.getComponent().
-setBackground(Color.YELLOW);
+public class Ejemplo4 implements MouseListener {
 
-    
-}}
+    @Override
+    public void mouseClicked(MouseEvent evento) {
+        System.out.println("Clic en posicion relativa al boton -> X: " + evento.getX() + ", Y: " + evento.getY());
+    }
+
+    @Override
+    public void mousePressed(MouseEvent evento) {
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent evento) {
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent evento) {
+        evento.getComponent().setBackground(Color.red);
+    }
+
+    @Override
+    public void mouseExited(MouseEvent evento) {
+        evento.getComponent().
+                setBackground(Color.YELLOW);
+
+    }
+}
